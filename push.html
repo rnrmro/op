@@ -4,6 +4,20 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <meta charset="UTF-8">
 <title>ブラウザでプッシュ通知を実装</title>
+ <script>
+	function push(){
+		Push.create("更新情報",
+		{
+		    body: "ブログの更新をお知らせします!",
+		    icon: 'casley_logo.png',
+		    timeout: 8000,
+		    onClick: function () {
+		        window.focus();
+		        this.close();
+	    	}
+		})
+	}
+</script>
 </head>
 <body>
 <center>
